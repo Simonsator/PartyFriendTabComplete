@@ -1,0 +1,6 @@
+name: Party-Member-Friend-Tab-Complete
+version: ${project.version}
+author: Simonsator
+depends: [PartyAndFriends]
+main: de.simonsator.partyandfriends.extensions.PMFTabCompleteMain
+description: An add-on for party and friends to add tab completes for friends and party members
