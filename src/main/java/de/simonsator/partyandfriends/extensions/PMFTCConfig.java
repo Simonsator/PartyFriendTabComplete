@@ -1,6 +1,7 @@
 package de.simonsator.partyandfriends.extensions;
 
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +11,8 @@ import java.io.IOException;
  * @version 1.0.0 25.01.17
  */
 public class PMFTCConfig extends ConfigurationCreator {
-	protected PMFTCConfig(File file) throws IOException {
-		super(file);
+	protected PMFTCConfig(File file, Plugin pPlugin) throws IOException {
+		super(file, pPlugin);
 		readFile();
 		loadDefaultValues();
 		saveFile();
@@ -22,8 +23,4 @@ public class PMFTCConfig extends ConfigurationCreator {
 		set("Use.PartyTabComplete", true);
 	}
 
-	@Override
-	public void reloadConfiguration() throws IOException {
-
-	}
 }
