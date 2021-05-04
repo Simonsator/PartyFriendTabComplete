@@ -16,7 +16,7 @@ public class PMFTabCompleteMain extends PAFExtension implements Listener {
 	@Override
 	public void onEnable() {
 		try {
-			Configuration config = new PMFTCConfig(new File(getDataFolder(), "config.yml"), this).getCreatedConfiguration();
+			Configuration config = new PMFTCConfig(new File(getConfigFolder(), "config.yml"), this).getCreatedConfiguration();
 			if (config.getBoolean("Use.FriendTabComplete"))
 				ProxyServer.getInstance().getPluginManager().registerListener(this, new FriendTabComplete());
 			if (config.getBoolean("Use.PartyTabComplete"))
